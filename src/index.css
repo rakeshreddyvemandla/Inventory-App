@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: silver;
+}
+
+.btn {
+  width: 6rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background-color: rgb(150, 251, 150);
+  color: white;
+}
+.btn-cancel {
+  background-color: tomato;
+  color: white;
+}

@@ -1,0 +1,66 @@
+.form-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5rem auto;
+  padding: 10px;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.form-container h2 {
+  margin: 1rem;
+}
+
+.form {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 1rem;
+  gap: 1rem;
+}
+
+.form input {
+  width: 16rem;
+  height: 0.5rem;
+  margin: 1rem 1.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.btn {
+  width: 6rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background-color: rgb(150, 251, 150);
+  color: white;
+}
+.btn-cancel {
+  background-color: tomato;
+  color: white;
+}
+.btn-back {
+  background-color: dodgerblue;
+  color: white;
+}
