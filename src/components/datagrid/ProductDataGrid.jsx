@@ -4,13 +4,19 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import RefreshIcon from "@mui/icons-material/Refresh";
+
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
-import { Button } from "@mui/material";
+
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const ProductDataGrid = () => {
   const [products, setItem] = useState(data);
+  const [filterItems, setFilterItems] = useState([]);
+  const [filterOpen, setFilterOpen] = useState(false);
+
+  const [refresh, setRefresh] = useState(false);
+
   const navigate = useNavigate();
 
   const getIndex = (id) => {
@@ -23,7 +29,9 @@ const ProductDataGrid = () => {
     return i;
   };
 
-  useEffect(() => {}, [products]);
+  useEffect(() => {
+    setFilterItems(["All", ...new Set(data.map((item) => item.assetGroup))]);
+  }, [products]);
 
   const handleDelete = (item) => {
     const newData = products.filter((product) => product.id !== item.id);
@@ -50,16 +58,46 @@ const ProductDataGrid = () => {
     }
   };
 
+  const handleFilter = (e) => {
+    const filterItem = e.target.value;
+
+    if (filterItem === "All") {
+      setItem(data);
+      console.log(products);
+    } else {
+      const filterItems = data.filter((item) => item.assetGroup === filterItem);
+      setItem(filterItems);
+    }
+  };
+
+  const handleRefresh = () => {
+    window.location.reload();
+  };
+
   return (
     <div className="main">
       <div className="container">
         <h2>Inventory</h2>
         <div className="container-toolbar">
-          <div onClick={() => setRefresh(!refresh)}>
-            <RefreshIcon />
+          <div className="refresh">
+            <RefreshIcon onClick={() => handleRefresh()} />
           </div>
-          <div>
-            <FilterAltIcon />
+          <div className="filter">
+            <FilterAltIcon onClick={() => setFilterOpen(!filterOpen)} />
+            <div
+              style={{ display: filterOpen ? "flex" : "none" }}
+              className="filter_items_container"
+            >
+              <select className="filter-list" onChange={(e) => handleFilter(e)}>
+                {filterItems.map((item, i) => {
+                  return (
+                    <option key={i} value={item}>
+                      {item}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
           </div>
           <div>
             <Link to={"add-asset"}>

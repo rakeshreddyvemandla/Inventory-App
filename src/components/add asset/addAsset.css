@@ -64,3 +64,15 @@
   background-color: dodgerblue;
   color: white;
 }
+
+.upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+.upload input {
+  height: 3rem;
+}

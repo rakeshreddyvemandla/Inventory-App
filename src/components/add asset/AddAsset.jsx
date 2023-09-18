@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { data } from "../../utils/data";
 import { useParams, useNavigate } from "react-router-dom";
+import UploadFileIcon from "@mui/icons-material/UploadFile";
 
 import "./addAsset.css";
 
@@ -129,6 +130,12 @@ const AddAsset = () => {
             required
           />
           <br />
+
+          <div className="upload">
+            <label htmlFor="file">Document:</label>
+
+            <input id="file" type="file" required />
+          </div>
 
           <div className="footer">
             <Link to={"/"}>

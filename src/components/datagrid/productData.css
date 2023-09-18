@@ -68,6 +68,24 @@ tr:nth-child(even) {
   color: white;
 }
 
+.refresh {
+  cursor: pointer;
+}
+
+.filter {
+  display: flex;
+  cursor: pointer;
+}
+
+.filter_items_container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter-list {
+  list-style-type: none;
+}
+
 @media screen and (min-width: 600px) {
   td,
   th {
