@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { data } from "../../utils/data";
 import { useParams, useNavigate } from "react-router-dom";
-import UploadFileIcon from "@mui/icons-material/UploadFile";
 
 import "./addAsset.css";
 
@@ -79,6 +78,7 @@ const AddAsset = () => {
 
       <div>
         <form className="form" onSubmit={formik.handleSubmit}>
+          <span style={{ color: "red" }}>*</span>
           <label htmlFor="assetGroup">Asset Group: </label>
           <input
             id="assetGroup"
@@ -87,7 +87,7 @@ const AddAsset = () => {
             value={formik.values.assetGroup}
             required
           />
-
+          <span style={{ color: "red" }}>*</span>
           <label htmlFor="assetName">Asset Name: </label>
           <input
             id="assetName"
@@ -97,6 +97,7 @@ const AddAsset = () => {
             required
           />
           <br />
+          <span style={{ color: "red" }}>*</span>
           <label htmlFor="quantity">Quantity: </label>
           <input
             id="quantity"
@@ -105,6 +106,7 @@ const AddAsset = () => {
             value={formik.values.quantity}
             required
           />
+          <span style={{ color: "red" }}>*</span>
           <label htmlFor="invoiceNum">Invoice Number: </label>
           <input
             id="invoiceNum"
@@ -114,6 +116,7 @@ const AddAsset = () => {
             required
           />
           <br />
+          <span style={{ color: "red" }}>*</span>
           <label htmlFor="purDate">Purchase On: </label>
           <input
             id="purDate"
@@ -121,6 +124,7 @@ const AddAsset = () => {
             onChange={formik.handleChange}
             value={formik.values.purDate}
           />
+          <span style={{ color: "red" }}>*</span>
           <label htmlFor="totalCharge">Total Charge: </label>
           <input
             id="totalCharge"
@@ -132,6 +136,7 @@ const AddAsset = () => {
           <br />
 
           <div className="upload">
+            <span style={{ color: "red" }}>*</span>
             <label htmlFor="file">Document:</label>
 
             <input id="file" type="file" required />

@@ -15,8 +15,6 @@ const ProductDataGrid = () => {
   const [filterItems, setFilterItems] = useState([]);
   const [filterOpen, setFilterOpen] = useState(false);
 
-  const [refresh, setRefresh] = useState(false);
-
   const navigate = useNavigate();
 
   const getIndex = (id) => {
