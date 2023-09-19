@@ -61,7 +61,6 @@ const ProductDataGrid = () => {
 
     if (filterItem === "All") {
       setItem(data);
-      console.log(products);
     } else {
       const filterItems = data.filter((item) => item.assetGroup === filterItem);
       setItem(filterItems);
