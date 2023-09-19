@@ -123,6 +123,7 @@ const AddAsset = () => {
             type="date"
             onChange={formik.handleChange}
             value={formik.values.purDate}
+            required
           />
           <span style={{ color: "red" }}>*</span>
           <label htmlFor="totalCharge">Total Charge: </label>
