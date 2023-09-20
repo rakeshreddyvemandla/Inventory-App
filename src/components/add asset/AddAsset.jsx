@@ -78,8 +78,9 @@ const AddAsset = () => {
 
       <div>
         <form className="form" onSubmit={formik.handleSubmit}>
-          <span style={{ color: "red" }}>*</span>
-          <label htmlFor="assetGroup">Asset Group: </label>
+          <label htmlFor="assetGroup">
+            <span style={{ color: "red" }}>*</span>Asset Group:{" "}
+          </label>
           <input
             id="assetGroup"
             type="text"
@@ -87,8 +88,10 @@ const AddAsset = () => {
             value={formik.values.assetGroup}
             required
           />
-          <span style={{ color: "red" }}>*</span>
-          <label htmlFor="assetName">Asset Name: </label>
+
+          <label htmlFor="assetName">
+            <span style={{ color: "red" }}>*</span>Asset Name:
+          </label>
           <input
             id="assetName"
             type="text"
@@ -97,8 +100,10 @@ const AddAsset = () => {
             required
           />
           <br />
-          <span style={{ color: "red" }}>*</span>
-          <label htmlFor="quantity">Quantity: </label>
+
+          <label htmlFor="quantity">
+            <span style={{ color: "red" }}>*</span>Quantity:
+          </label>
           <input
             id="quantity"
             type="text"
@@ -106,8 +111,10 @@ const AddAsset = () => {
             value={formik.values.quantity}
             required
           />
-          <span style={{ color: "red" }}>*</span>
-          <label htmlFor="invoiceNum">Invoice Number: </label>
+
+          <label htmlFor="invoiceNum">
+            <span style={{ color: "red" }}>*</span>Invoice Number:
+          </label>
           <input
             id="invoiceNum"
             type="text"
@@ -116,8 +123,10 @@ const AddAsset = () => {
             required
           />
           <br />
-          <span style={{ color: "red" }}>*</span>
-          <label htmlFor="purDate">Purchase On: </label>
+
+          <label htmlFor="purDate">
+            <span style={{ color: "red" }}>*</span>Purchase On:
+          </label>
           <input
             id="purDate"
             type="date"
@@ -125,8 +134,10 @@ const AddAsset = () => {
             value={formik.values.purDate}
             required
           />
-          <span style={{ color: "red" }}>*</span>
-          <label htmlFor="totalCharge">Total Charge: </label>
+
+          <label htmlFor="totalCharge">
+            <span style={{ color: "red" }}>*</span>Total Charge:
+          </label>
           <input
             id="totalCharge"
             type="number"
@@ -137,8 +148,9 @@ const AddAsset = () => {
           <br />
 
           <div className="upload">
-            <span style={{ color: "red" }}>*</span>
-            <label htmlFor="file">Document:</label>
+            <label htmlFor="file">
+              <span style={{ color: "red" }}>*</span>Document:
+            </label>
 
             <input id="file" type="file" required />
           </div>
